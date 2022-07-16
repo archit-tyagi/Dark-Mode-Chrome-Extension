@@ -1,0 +1,21 @@
+{
+    "name": "Dark Theme",
+    "description": "Toggle dark or light mode for any website with a click.",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "minimum_chrome_version": "93",
+    "content_scripts":[{
+        "matches":["https://*/*"],
+        "js":["background.js"]
+    }],
+    "action":{
+        "default_title":"Switch Theme",
+        "default_popup":"popup.html"
+    },
+    "permissions":
+         ["tabs","scripting"],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+      ]
+  }

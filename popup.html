@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Switch Theme</title>
+    <style>
+        body {
+            min-width: 200px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+        }
+
+        .button {
+            font-family: 'Merriweather', serif;
+            background-color: #FDFCA3;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 2rem;
+            width: 4.5rem;
+            border-radius: 1rem;
+            cursor: pointer;
+
+        }
+
+        .row {
+            padding: 0 0.25rem;
+            pointer-events: none;
+        }
+
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            background-color: #FBE36D;
+            pointer-events: none;
+        }
+
+        @keyframes circleright {
+            from {
+                left: 0;
+                background-color: #FBE36D;
+            }
+
+            to {
+                left: 100%;
+                transform: translateX(-100%);
+                background-color: #588BE4;
+            }
+        }
+
+        @keyframes circleleft {
+            from {
+                left: 100%;
+                transform: translateX(-100%);
+                background-color: #588BE4;
+            }
+
+            to {
+                left: 0;
+                background-color: #FBE36D;
+            }
+        }
+
+        @keyframes bgyellow {
+            from {
+                background-color: #FDFCA3;
+            }
+
+            to {
+                background-color: #8ABFF0;
+            }
+
+        }
+
+        @keyframes bgblue {
+            from {
+                background-color: #8ABFF0;
+            }
+
+            to {
+                background-color: #FDFCA3;
+            }
+
+        }
+    </style>
+</head>
+
+<body class="htm">
+   
+    <h1>Dark Mode</h2>
+        <div class="button">
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="circle"></div>
+        </div>
+
+        <script src="background.js"></script>
+</body>
+
+</html>
